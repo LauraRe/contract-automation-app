@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Customer = ({ name }) => {
+const Customer = ({ id, name, onDelete }) => {
   return (
     <>
       {/* <img alt='customer' src='https://robohash.org/test' /> */}
       <li>{name}</li>
-      <button>Delete</button>
+      <button onClick={() => onDelete(id)}>Delete</button>
     </>
   )
 };

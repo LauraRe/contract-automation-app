@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import CustomersList from './Components/CustomersList';
-import { customers } from './customers';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <CustomersList customers={customers} />,
+  <App />,
   document.getElementById('root')
 );
 
