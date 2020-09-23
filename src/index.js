@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Customer from './Components/Customer';
+import { customers } from './customers';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <div>
+    <Customer id={customers[0].id} name={customers[0].name} />
+    <Customer id={customers[1].id} name={customers[1].name}/>
+  </div>,
   document.getElementById('root')
 );
 
