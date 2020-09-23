@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Customer = (props) => {
+const Customer = ({ name }) => {
   return (
-    <div id={props.id}>
+    <>
       {/* <img alt='customer' src='https://robohash.org/test' /> */}
-      <li>{props.name}</li>
+      <li>{name}</li>
       <button>Delete</button>
-    </div>
+    </>
   )
 };
 

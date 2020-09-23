@@ -1,15 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Customer from './Components/Customer';
+import CustomersList from './Components/CustomersList';
 import { customers } from './customers';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <div>
-    <Customer id={customers[0].id} name={customers[0].name} />
-    <Customer id={customers[1].id} name={customers[1].name}/>
-  </div>,
+  <CustomersList customers={customers} />,
   document.getElementById('root')
 );
 
