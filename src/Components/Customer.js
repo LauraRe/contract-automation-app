@@ -1,11 +1,13 @@
 import React from 'react'
+import ContractsList from './ContractsList';
 
-const Customer = ({ id, name, onDelete }) => {
+const Customer = ({ contracts, id, name, onDelete }) => {
   return (
     <>
       {/* <img alt='customer' src='https://robohash.org/test' /> */}
-      <li>{name}</li>
+      <h3>{name}</h3>
       <button onClick={() => onDelete(id)}>Delete</button>
+      <ContractsList contracts={contracts} />
     </>
   )
 };

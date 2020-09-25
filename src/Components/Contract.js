@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Contract = ({customer, name}) => {
+const Contract = ({name}) => {
     return (
       <li>
-        {`${name}, customer: ${customer}`}
+        {name}
       </li>
     )
 };

@@ -10,7 +10,6 @@ const ContractsList = ({contracts}) => {
             <Contract 
               key={contract.id}
               name={contract.name}
-              customer={contract.customerId}
             />
           )
         })
