@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Contract = ({name}) => {
+const Contract = ({id, name}) => {
     return (
-      <li>
-        {name}
-      </li>
+      <ul>
+        <h4>{name}</h4>
+        Contract id: #{id} 
+      </ul>
     )
 };
 
