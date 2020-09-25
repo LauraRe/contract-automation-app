@@ -3,6 +3,8 @@ import CustomersList from './Components/CustomersList';
 import { customers } from './customers';
 import ContractsList from './Components/ContractsList';
 import { contracts } from './contracts';
+import Homepage from './Components/Homepage';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   const [customersList, setCustomersList] = useState(customers);
@@ -20,12 +22,23 @@ const App = () => {
   }
 
   return (
-    <>
-      <h1>Customers:</h1>
-      <CustomersList contracts={contractsList} customers={customersList} onDelete={handleDeleteCustomer} />
-      <h1>Contracts:</h1>
-      <ContractsList contracts={contractsList} />
-    </>
+    <Router>
+      <Switch>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+          <Route path="/contracts">
+            <ContractsList contracts={contractsList} />
+          </Route>
+          <Route path="/customers">
+            <CustomersList 
+              contracts={contractsList} 
+              customers={customersList} 
+              onDelete={handleDeleteCustomer} 
+            />
+          </Route>
+        </Switch>
+    </Router>
   )
 }
 
