@@ -7,7 +7,7 @@ const Customer = ({ contracts, id, name, onDelete }) => {
       {/* <img alt='customer' src='https://robohash.org/test' /> */}
       <h3>{name}</h3>
       <button onClick={() => onDelete(id)}>Delete</button>
-      <ContractsList contracts={contracts} />
+      <ContractsList customerContracts={contracts.filter((contract) => contract.customerId === id)} />
     </>
   )
 };

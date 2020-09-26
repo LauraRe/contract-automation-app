@@ -1,11 +1,13 @@
 import React from 'react';
 import Contract from './Contract';
+import { connect } from 'react-redux';
 
-const ContractsList = ({contracts}) => {
+const ContractsList = ({contracts, customerContracts}) => {
+  let contractList = customerContracts || contracts
   return (
     <> 
       {
-        contracts.map(contract => {
+        contractList.map(contract => {
           return (
             <Contract 
               key={contract.id}
@@ -15,8 +17,13 @@ const ContractsList = ({contracts}) => {
           )
         })
       }
-    </>
-  )
-};
+    </>       
+  )};
 
-export default ContractsList;
+const mapStateToProps = (state) => {
+  return {
+    contracts: state.contracts
+  }
+}
+
+export default connect(mapStateToProps)(ContractsList)

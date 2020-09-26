@@ -1,21 +1,20 @@
 import React from 'react';
 import Customer from './Customer';
+import { connect } from 'react-redux';
 
-const CustomersList = ({ contracts, customers, onDelete }) => {
+const CustomersList = ({ contracts, customers, dispatch }) => {
   return (
     <>
       <h1>Customers:</h1>
       {
         customers.map(customer => {
-          const customerContracts = contracts.filter((contract) => contract.customerId === customer.id)
-
           return (
             <Customer
               key={customer.id}
-              contracts = {customerContracts}
+              contracts={contracts}
               id={customer.id} 
               name={customer.name}
-              onDelete={onDelete}
+              onDelete={() => dispatch({ type: 'DELETE_CUSTOMER', id: customer.id })}
             />
           )
         })
@@ -24,4 +23,11 @@ const CustomersList = ({ contracts, customers, onDelete }) => {
   )
 };
 
-export default CustomersList;
+const mapStateToProps = (state) => {
+  return {
+    customers: state.customers,
+    contracts: state.contracts
+  }
+}
+
+export default connect(mapStateToProps)(CustomersList)
