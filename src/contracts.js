@@ -1,22 +1,22 @@
 export const contracts = [
   {
     id: '1',
-    name: 'nights watch',
+    name: 'Nights watch hiring contract',
     customerId: '1'
   },
   {
     id: '2',
-    name: 'wolfs',
+    name: 'Wolfs regulatory contract',
     customerId: '1'
   },
   {
     id: '3',
-    name: 'warriors',
+    name: 'Warriors hiring contract',
     customerId: '2'
   },
   {
     id: '4',
-    name: 'dragons',
+    name: 'Dragons regulatory contract',
     customerId: '2'
   }
 ]
