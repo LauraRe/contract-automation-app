@@ -6,8 +6,14 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     font-family: 'Barlow', sans-serif;
   }
+  div {
+    text-align: center;
+  }
   h1 {
     font-family: 'Barlow', sans-serif;
+  }
+  li {
+    display: inline-block;
   }
 `;
 
