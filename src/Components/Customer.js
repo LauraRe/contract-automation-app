@@ -1,6 +1,15 @@
 import React from 'react'
 import ContractsList from './ContractsList';
+import styled from 'styled-components';
 
+const Button = styled.button`
+  background: #E54C29;
+  color: white;
+  padding: .5em 1.25em;
+  border-radius: .3rem;
+  font-size: .9rem;
+  text-transform: uppercase;
+`
 
 const Customer = ({ contracts, id, name, onDelete }) => {
   const deleteCustomerAlert = (id) => {
@@ -14,9 +23,8 @@ const Customer = ({ contracts, id, name, onDelete }) => {
   }
   return (
     <>
-      {/* <img alt='customer' src='https://robohash.org/test' /> */}
       <h3>{name}</h3>
-      <button onClick={() => deleteCustomerAlert(id)}>Delete</button>
+      <Button onClick={() => deleteCustomerAlert(id)}>Delete</Button>
       <ContractsList customerContracts={contracts.filter((contract) => contract.customerId === id)} />
     </>
   )

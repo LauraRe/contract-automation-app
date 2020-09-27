@@ -1,11 +1,19 @@
 import React from 'react';
 import Contract from './Contract';
 import { connect } from 'react-redux';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-left: 1em;
+  margin-right: 1em;
+`
 
 const ContractsList = ({contracts, customerContracts}) => {
   let contractList = customerContracts || contracts
   return (
-      <wrapper> 
+      <Wrapper> 
         {
           contractList.map(contract => {
             return (
@@ -17,7 +25,7 @@ const ContractsList = ({contracts, customerContracts}) => {
             )
           })
         }
-      </wrapper>
+      </Wrapper>
   )};
 
 const mapStateToProps = (state) => {
