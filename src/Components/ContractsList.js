@@ -5,19 +5,19 @@ import { connect } from 'react-redux';
 const ContractsList = ({contracts, customerContracts}) => {
   let contractList = customerContracts || contracts
   return (
-    <> 
-      {
-        contractList.map(contract => {
-          return (
-            <Contract 
-              key={contract.id}
-              id={contract.id}
-              name={contract.name}
-            />
-          )
-        })
-      }
-    </>       
+      <wrapper> 
+        {
+          contractList.map(contract => {
+            return (
+              <Contract 
+                key={contract.id}
+                id={contract.id}
+                name={contract.name}
+              />
+            )
+          })
+        }
+      </wrapper>
   )};
 
 const mapStateToProps = (state) => {

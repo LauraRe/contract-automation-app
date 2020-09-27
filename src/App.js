@@ -15,7 +15,7 @@ const App = () => {
             <Homepage />
           </Route>
           <Route path="/contracts">
-            <h1>Contracts:</h1>
+            <h2>Contracts:</h2>
             <ContractsList />
           </Route>
           <Route path="/customers">

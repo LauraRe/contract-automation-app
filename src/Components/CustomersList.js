@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 const CustomersList = ({ contracts, customers, dispatch }) => {
   return (
     <>
-      <h1>Customers:</h1>
+      <h2>Customers:</h2>
       {
         customers.map(customer => {
           return (
