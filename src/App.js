@@ -3,11 +3,14 @@ import CustomersList from './Components/CustomersList';
 import ContractsList from './Components/ContractsList';
 import Homepage from './Components/Homepage';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import GlobalStyles from './theme/globalStyle';
 
 const App = () => {
   return (
-    <Router>
-      <Switch>
+    <>
+      <GlobalStyles />
+      <Router>
+        <Switch>
           <Route exact path="/">
             <Homepage />
           </Route>
@@ -19,7 +22,8 @@ const App = () => {
             <CustomersList />
           </Route>
         </Switch>
-    </Router>
+      </Router>
+    </>
   )
 }
 

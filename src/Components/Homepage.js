@@ -1,10 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: #147CBD;
+`;
 
 const Homepage = () => {
  return (
     <>
-      <h1>The Contract Automation Platform</h1>
+      <Title>The Contract Automation Platform</Title>
       <li>
         <Link to="/contracts">Contracts</Link>
       </li>
