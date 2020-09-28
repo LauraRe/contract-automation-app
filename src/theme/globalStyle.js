@@ -1,6 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+  a {
+    display: inline-block;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: #E54C29 !important;
+    font-size: 1.3rem;
+    margin-right: 3em;
+    text-align: center;
+  }
   body {
     padding: 0;
     margin: 0;
@@ -24,9 +34,6 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.5rem;
     text-align: center;
     color: black;
-  }
-  li {
-    display: inline-block;
   }
 `;
 
