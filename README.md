@@ -4,11 +4,11 @@
 ### Task made as part of interview process and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ---
 ## Requirements
-- Homepage - link to the two other pages. 
-- Contract list page - list all contracts available in the platform.
-- Customer list page - list all customers and the contracts connected to each customer.
-There is also a button for each customer which deletes the customer and all its contracts.
-- The contract and customer data are held in the redux store
+- `Homepage` - link to the two other pages. 
+- `Contract list page` - list all contracts available in the platform.
+- `Customer list page` - list all customers and the contracts connected to each customer.
+There is also a `button` for each customer which deletes the customer and all its contracts.
+- The contract and customer data are held in the `redux store`
 - The application isn’t connected to a server.
 ---
 ## Getting started 
