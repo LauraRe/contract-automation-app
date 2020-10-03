@@ -10,17 +10,17 @@ const Wrapper = styled.div`
   margin-right: 1em;
 `
 
-const ContractsList = ({contracts, customerContracts}) => {
+const ContractsList = ({ contracts, customerContracts }) => {
   let contractList = customerContracts || contracts
   return (
       <Wrapper> 
         {
-          contractList.map(contract => {
+          contractList.map(({ id, name }) => {
             return (
               <Contract 
-                key={contract.id}
-                id={contract.id}
-                name={contract.name}
+                key={id}
+                id={id}
+                name={name}
               />
             )
           })

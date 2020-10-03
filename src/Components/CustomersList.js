@@ -10,14 +10,14 @@ const CustomersList = ({ contracts, customers, dispatch }) => {
       <Link to="/contracts">Go to Contracts page</Link>
       <h2>Customers:</h2>
       {
-        customers.map(customer => {
+        customers.map(({ id, name }) => {
           return (
             <Customer
-              key={customer.id}
+              key={id}
               contracts={contracts}
-              id={customer.id} 
-              name={customer.name}
-              onDelete={() => dispatch({ type: 'DELETE_CUSTOMER', id: customer.id })}
+              id={id} 
+              name={name}
+              onDelete={() => dispatch({ type: 'DELETE_CUSTOMER', id })}
             />
           )
         })

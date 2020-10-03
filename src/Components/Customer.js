@@ -12,10 +12,10 @@ const Button = styled.button`
 `
 
 const Customer = ({ contracts, id, name, onDelete }) => {
-  const deleteCustomerAlert = (id) => {
-    if (window.confirm('This action will DELETE this customer PERMANENTLY. Are you sure you want to proceed?')) {
+  const deleteCustomerAlert = (id, name) => {
+    if (window.confirm(`This action will DELETE ${name} PERMANENTLY. Are you sure you want to proceed?`)) {
       onDelete(id)
-      alert('Customer deleted successfully.')  
+      alert(`${name} deleted successfully.`)  
     } else {
       return alert('Action cancelled by the user. No changes were made.')
     }
@@ -24,8 +24,8 @@ const Customer = ({ contracts, id, name, onDelete }) => {
   return (
     <>
       <h3>{name}</h3>
-      <Button onClick={() => deleteCustomerAlert(id)}>Delete</Button>
-      <ContractsList customerContracts={contracts.filter((contract) => contract.customerId === id)} />
+      <Button onClick={() => deleteCustomerAlert(id, name)}>Delete</Button>
+      <ContractsList customerContracts={contracts.filter(({ customerId }) => customerId === id)} />
     </>
   )
 };
